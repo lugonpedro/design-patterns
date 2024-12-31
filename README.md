@@ -1,2 +1,2 @@
 - npm i
-- Para rodar os arquivos escreva npm run 'nome do arquivo' (exemplo: npm run singleton)
+- Para rodar os arquivos escreva npm start 'nome do arquivo' (exemplo: npm start singleton)

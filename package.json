@@ -4,7 +4,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "singleton": "node --no-warnings --loader ts-node/esm singleton.ts"
+    "start": "node --no-warnings --loader ts-node/esm run.ts"
   },
   "keywords": [],
   "author": "",
