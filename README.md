@@ -1,0 +1,1 @@
+Para rodar os arquivos escreva npm run 'nome do arquivo' (exemplo: npm run singleton)
