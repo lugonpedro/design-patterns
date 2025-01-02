@@ -1,13 +1,14 @@
 import {exec} from 'child_process' 
 
-const scriptName = process.argv[2];
+const folderName = process.argv[2];
+const scriptName = process.argv[3];
 
-if (!scriptName) {
-  console.error('Please provide a script name to run.');
+if (!folderName || !scriptName) {
+  console.error('Please provide both a folder name and a script name to run.');
   process.exit(1);
 }
 
-const command = `node --no-warnings --loader ts-node/esm ${scriptName}.ts`;
+const command = `node --no-warnings --loader ts-node/esm ${folderName}/${scriptName}.ts`;
 
 exec(command, (error, stdout, stderr) => {
   if (error) {

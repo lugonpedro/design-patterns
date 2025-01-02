@@ -1,2 +1,5 @@
+### Para rodar o projeto:
+
 - npm i
-- Para rodar os arquivos escreva npm start 'nome do arquivo' (exemplo: npm start singleton)
+- ```npm start pasta nome_do_arquivo```
+> exemplo: npm start creational singleton
