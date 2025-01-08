@@ -1,46 +1,5 @@
-interface MealCompositeProtocol {
-  getPrice(): number;
-}
-
-abstract class AbstractMeal implements MealCompositeProtocol {
-  constructor(private name: string, private price: number) { }
-
-  getPrice(): number {
-    return this.price;
-  }
-}
-
-class Rice extends AbstractMeal {
-}
-
-class Beans extends AbstractMeal {
-}
-
-class Meat extends AbstractMeal {
-}
-
-class Desert extends AbstractMeal {
-}
-
-class MealBox implements MealCompositeProtocol {
-  private readonly _children: MealCompositeProtocol[] = [];
-
-  getPrice(): number {
-    return this._children.reduce((sum, meal) => sum + meal.getPrice(), 0);
-  }
-
-  add(...meal: MealCompositeProtocol[]): void {
-    meal.forEach(item => this._children.push(item));
-  }
-}
-
-const rice = new Rice('Arroz', 5);
-const beans = new Beans('Feijão', 10);
-const meat = new Meat('Carne', 20);
-const mealBox = new MealBox();
-mealBox.add(rice, beans, meat);
-console.log("Meal Box ", mealBox)
-console.log("Meal Box Price ", mealBox.getPrice())
+import { Beans, Desert, Meat, Rice } from "./abstract-meal";
+import { MealBox } from "./meal-box";
 
 interface MealBuilderProtocol {
   makeMeal(): this;

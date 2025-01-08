@@ -8,7 +8,7 @@ if (!folderName || !scriptName) {
   process.exit(1);
 }
 
-const command = `node --no-warnings --loader ts-node/esm ${folderName}/${scriptName}.ts`;
+const command = `node --no-warnings --loader ts-node/esm ${folderName}/${scriptName}/index.ts`;
 
 exec(command, (error, stdout, stderr) => {
   if (error) {
