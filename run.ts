@@ -39,8 +39,8 @@ const execCommand = () => {
     console.error('Please provide both a folder name and a script name to run.');
     process.exit(1);
   }
-  
-  exec(`npx sucrase-node src/${folderName}/${scriptName}/index.ts`, (error, stdout, stderr) => {
+
+  exec(`npx sucrase-node ${folderName}/${scriptName}/index.ts`, (error, stdout, stderr) => {
     if (error) {
       console.error(`Error executing script: ${scriptName}`);
       console.error(error)
