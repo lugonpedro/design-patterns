@@ -6,7 +6,7 @@ interface MealBuilderProtocol {
   makeDesert(): this;
 }
 
-class MainDishBuilder implements MealBuilderProtocol {
+export class MainDishBuilder implements MealBuilderProtocol {
   private _meal: MealBox = new MealBox();
 
   makeMeal(): this {
